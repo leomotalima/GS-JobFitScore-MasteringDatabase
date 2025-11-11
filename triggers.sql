@@ -215,3 +215,44 @@ BEGIN
     );
 END;
 /
+
+-- Teste 1: USUARIOS
+INSERT INTO usuarios (nome, email, senha) VALUES ('Teste Trigger', 'teste@trigger.com', '123');
+UPDATE usuarios SET nome = 'Teste Trigger Atualizado' WHERE email = 'teste@trigger.com';
+DELETE FROM usuarios WHERE email = 'teste@trigger.com';
+
+-- Teste 2: EMPRESAS
+INSERT INTO empresas (nome, cnpj) VALUES ('Empresa Trigger', '11122233000199');
+UPDATE empresas SET nome = 'Empresa Trigger Atualizada' WHERE cnpj = '11122233000199';
+DELETE FROM empresas WHERE cnpj = '11122233000199';
+
+-- Teste 3: VAGAS
+INSERT INTO vagas (titulo, empresa_id) VALUES ('Vaga Trigger', 1);
+UPDATE vagas SET titulo = 'Vaga Trigger Atualizada' WHERE titulo = 'Vaga Trigger';
+DELETE FROM vagas WHERE titulo = 'Vaga Trigger Atualizada';
+
+-- Teste 4: HABILIDADES
+INSERT INTO habilidades (nome) VALUES ('Habilidade Trigger');
+UPDATE habilidades SET nome = 'Habilidade Trigger Atualizada' WHERE nome = 'Habilidade Trigger';
+DELETE FROM habilidades WHERE nome = 'Habilidade Trigger Atualizada';
+
+-- Teste 5: USUARIO_HABILIDADE
+DELETE FROM usuario_habilidade WHERE usuario_id = 1 AND habilidade_id = 10;
+INSERT INTO usuario_habilidade (usuario_id, habilidade_id) VALUES (1, 10);
+
+-- Teste 6: CURSOS
+INSERT INTO cursos (nome, instituicao, carga_horaria, usuario_id) VALUES ('Curso Trigger', 'FIAP', 40, 1);
+UPDATE cursos SET nome = 'Curso Trigger Atualizado' WHERE nome = 'Curso Trigger';
+DELETE FROM cursos WHERE nome = 'Curso Trigger Atualizado';
+
+-- Teste 7: CANDIDATURAS
+INSERT INTO candidaturas (usuario_id, vaga_id) VALUES (1, 1);
+UPDATE candidaturas SET status = 'Aprovado' WHERE usuario_id = 1 AND vaga_id = 1;
+DELETE FROM candidaturas WHERE usuario_id = 1 AND vaga_id = 1;
+
+-- Teste 8: VAGA_HABILIDADE
+DELETE FROM vaga_habilidade WHERE vaga_id = 1 AND habilidade_id = 1;
+INSERT INTO vaga_habilidade (vaga_id, habilidade_id) VALUES (1, 1);
+
+-- Verificação final
+SELECT * FROM auditoria_log ORDER BY data_operacao ASC;

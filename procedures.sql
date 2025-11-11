@@ -312,8 +312,9 @@ BEGIN
     sp_inserir_vaga_habilidade(1, 4);
     sp_inserir_vaga_habilidade(1, 10);
     
-    sp_inserir_vaga_habilidade(2, 2);
-    sp_inserir_vaga_habilidade(2, 4);
+    sp_inserir_vaga_habilidade(2, 2);  -- Python
+    sp_inserir_vaga_habilidade(2, 4);  -- SQL
+    sp_inserir_vaga_habilidade(2, 7);  -- Docker
     
     sp_inserir_vaga_habilidade(3, 3);
     sp_inserir_vaga_habilidade(3, 5);
@@ -390,3 +391,14 @@ BEGIN
     DBMS_OUTPUT.PUT_LINE('Candidaturas inseridas com sucesso!');
 END;
 /
+
+select * from vaga_habilidade;
+select * from usuario_habilidade;
+select * from candidaturas;
+select * from cursos;
+select * from habilidades;
+select * from vagas;
+select * from empresas;
+select * from usuarios;
+select * from auditoria_log;
+
