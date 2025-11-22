@@ -482,8 +482,6 @@ BEGIN
     pkg_insertDados.sp_inserir_empresa('Web Solutions Pro', '77889900000123', 'contato@websolutions.com', 'websol5467', v_id);
     pkg_insertDados.sp_inserir_empresa('Mobile Apps Brasil', '66554433000187', 'contato@mobileapps.com', 'mobileapp012', v_id);
     pkg_insertDados.sp_inserir_empresa('Cyber Security Tech', '22334455000141', 'contato@cybersecurity.com', 'cibersecurity40921', v_id);
-
-    DBMS_OUTPUT.PUT_LINE('Empresas inseridas com sucesso!');
 END;
 /
 
@@ -500,9 +498,9 @@ BEGIN
     pkg_insertDados.sp_inserir_habilidade('Kubernetes', v_id);
     pkg_insertDados.sp_inserir_habilidade('AWS', v_id);
     pkg_insertDados.sp_inserir_habilidade('Git', v_id);
-    DBMS_OUTPUT.PUT_LINE('Habilidades inseridas com sucesso!');
 END;
 /
+
 
 DECLARE
     v_id NUMBER;
@@ -517,49 +515,23 @@ BEGIN
     pkg_insertDados.sp_inserir_vaga('Desenvolvedor Front-End React', 8, v_id);
     pkg_insertDados.sp_inserir_vaga('Desenvolvedor Mobile Android', 9, v_id);
     pkg_insertDados.sp_inserir_vaga('Analista de Segurança da Informação', 10, v_id);
-    pkg_insertDados.sp_inserir_vaga('DevOps Engineer', 1, v_id);
-    pkg_insertDados.sp_inserir_vaga('Desenvolvedor Back-End Node.js', 2, v_id);
-    pkg_insertDados.sp_inserir_vaga('Tech Lead Java', 3, v_id);
-    pkg_insertDados.sp_inserir_vaga('Engenheiro de Software', 4, v_id);
-    pkg_insertDados.sp_inserir_vaga('Analista de Banco de Dados', 5, v_id);
-    DBMS_OUTPUT.PUT_LINE('Vagas inseridas com sucesso!');
 END;
 /
 
 BEGIN
     pkg_insertDados.sp_inserir_usuario_habilidade(1, 1);
-    pkg_insertDados.sp_inserir_usuario_habilidade(1, 4);
-    pkg_insertDados.sp_inserir_usuario_habilidade(1, 10);
     pkg_insertDados.sp_inserir_usuario_habilidade(2, 2);
-    pkg_insertDados.sp_inserir_usuario_habilidade(2, 4);
-    pkg_insertDados.sp_inserir_usuario_habilidade(2, 9);
     pkg_insertDados.sp_inserir_usuario_habilidade(3, 3);
-    pkg_insertDados.sp_inserir_usuario_habilidade(3, 5);
-    pkg_insertDados.sp_inserir_usuario_habilidade(3, 6);
-    pkg_insertDados.sp_inserir_usuario_habilidade(4, 2);
     pkg_insertDados.sp_inserir_usuario_habilidade(4, 4);
-    pkg_insertDados.sp_inserir_usuario_habilidade(4, 7);
-    pkg_insertDados.sp_inserir_usuario_habilidade(5, 9);
-    pkg_insertDados.sp_inserir_usuario_habilidade(5, 7);
-    pkg_insertDados.sp_inserir_usuario_habilidade(5, 8);
-    pkg_insertDados.sp_inserir_usuario_habilidade(6, 1);
-    pkg_insertDados.sp_inserir_usuario_habilidade(6, 7);
-    pkg_insertDados.sp_inserir_usuario_habilidade(6, 10);
-    pkg_insertDados.sp_inserir_usuario_habilidade(7, 3);
-    pkg_insertDados.sp_inserir_usuario_habilidade(7, 5);
-    pkg_insertDados.sp_inserir_usuario_habilidade(7, 10);
-    pkg_insertDados.sp_inserir_usuario_habilidade(8, 6);
-    pkg_insertDados.sp_inserir_usuario_habilidade(8, 3);
-    pkg_insertDados.sp_inserir_usuario_habilidade(8, 7);
-    pkg_insertDados.sp_inserir_usuario_habilidade(9, 1);
-    pkg_insertDados.sp_inserir_usuario_habilidade(9, 4);
+    pkg_insertDados.sp_inserir_usuario_habilidade(5, 5);
+    pkg_insertDados.sp_inserir_usuario_habilidade(6, 6);
+    pkg_insertDados.sp_inserir_usuario_habilidade(7, 7);
+    pkg_insertDados.sp_inserir_usuario_habilidade(8, 8);
     pkg_insertDados.sp_inserir_usuario_habilidade(9, 9);
-    pkg_insertDados.sp_inserir_usuario_habilidade(10, 2);
-    pkg_insertDados.sp_inserir_usuario_habilidade(10, 8);
-    pkg_insertDados.sp_inserir_usuario_habilidade(10, 9);
-    DBMS_OUTPUT.PUT_LINE('Habilidades dos usuários inseridas com sucesso!');
+    pkg_insertDados.sp_inserir_usuario_habilidade(10, 10);
 END;
 /
+
 
 DECLARE
     v_id NUMBER;
@@ -574,43 +546,20 @@ BEGIN
     pkg_insertDados.sp_inserir_curso('Node.js Completo', 'Udemy', 45, 8, v_id);
     pkg_insertDados.sp_inserir_curso('Scrum Master Certification', 'Scrum.org', 16, 9, v_id);
     pkg_insertDados.sp_inserir_curso('Segurança da Informação', 'Descomplica', 60, 10, v_id);
-    pkg_insertDados.sp_inserir_curso('Git e GitHub', 'Digital Innovation One', 20, 1, v_id);
-    pkg_insertDados.sp_inserir_curso('Machine Learning', 'Coursera', 80, 2, v_id);
-    DBMS_OUTPUT.PUT_LINE('Cursos inseridos com sucesso!');
 END;
 /
 
 BEGIN
     pkg_insertDados.sp_inserir_vaga_habilidade(1, 1);
-    pkg_insertDados.sp_inserir_vaga_habilidade(1, 4);
-    pkg_insertDados.sp_inserir_vaga_habilidade(1, 10);
     pkg_insertDados.sp_inserir_vaga_habilidade(2, 2);
-    pkg_insertDados.sp_inserir_vaga_habilidade(2, 4);
-    pkg_insertDados.sp_inserir_vaga_habilidade(2, 7);
     pkg_insertDados.sp_inserir_vaga_habilidade(3, 3);
-    pkg_insertDados.sp_inserir_vaga_habilidade(3, 5);
-    pkg_insertDados.sp_inserir_vaga_habilidade(3, 6);
-    pkg_insertDados.sp_inserir_vaga_habilidade(4, 2);
     pkg_insertDados.sp_inserir_vaga_habilidade(4, 4);
-    pkg_insertDados.sp_inserir_vaga_habilidade(4, 7);
-    pkg_insertDados.sp_inserir_vaga_habilidade(5, 9);
-    pkg_insertDados.sp_inserir_vaga_habilidade(5, 7);
-    pkg_insertDados.sp_inserir_vaga_habilidade(5, 8);
-    pkg_insertDados.sp_inserir_vaga_habilidade(6, 2);
-    pkg_insertDados.sp_inserir_vaga_habilidade(6, 4);
-    pkg_insertDados.sp_inserir_vaga_habilidade(7, 10);
-    pkg_insertDados.sp_inserir_vaga_habilidade(8, 3);
-    pkg_insertDados.sp_inserir_vaga_habilidade(8, 5);
-    pkg_insertDados.sp_inserir_vaga_habilidade(9, 1);
-    pkg_insertDados.sp_inserir_vaga_habilidade(9, 10);
-    pkg_insertDados.sp_inserir_vaga_habilidade(10, 2);
-    pkg_insertDados.sp_inserir_vaga_habilidade(10, 4);
-    pkg_insertDados.sp_inserir_vaga_habilidade(11, 7);
-    pkg_insertDados.sp_inserir_vaga_habilidade(11, 8);
-    pkg_insertDados.sp_inserir_vaga_habilidade(11, 9);
-    pkg_insertDados.sp_inserir_vaga_habilidade(12, 6);
-    pkg_insertDados.sp_inserir_vaga_habilidade(12, 4);
-    DBMS_OUTPUT.PUT_LINE('Habilidades das vagas inseridas com sucesso!');
+    pkg_insertDados.sp_inserir_vaga_habilidade(5, 5);
+    pkg_insertDados.sp_inserir_vaga_habilidade(6, 6);
+    pkg_insertDados.sp_inserir_vaga_habilidade(7, 7);
+    pkg_insertDados.sp_inserir_vaga_habilidade(8, 8);
+    pkg_insertDados.sp_inserir_vaga_habilidade(9, 9);
+    pkg_insertDados.sp_inserir_vaga_habilidade(10, 10);
 END;
 /
 
@@ -618,26 +567,15 @@ DECLARE
     v_id NUMBER;
 BEGIN
     pkg_insertDados.sp_inserir_candidatura(1, 1, v_id);
-    pkg_insertDados.sp_inserir_candidatura(1, 9, v_id);
     pkg_insertDados.sp_inserir_candidatura(2, 2, v_id);
-    pkg_insertDados.sp_inserir_candidatura(2, 4, v_id);
-    pkg_insertDados.sp_inserir_candidatura(2, 6, v_id);
     pkg_insertDados.sp_inserir_candidatura(3, 3, v_id);
-    pkg_insertDados.sp_inserir_candidatura(3, 8, v_id);
     pkg_insertDados.sp_inserir_candidatura(4, 4, v_id);
-    pkg_insertDados.sp_inserir_candidatura(4, 6, v_id);
     pkg_insertDados.sp_inserir_candidatura(5, 5, v_id);
-    pkg_insertDados.sp_inserir_candidatura(5, 11, v_id);
-    pkg_insertDados.sp_inserir_candidatura(6, 1, v_id);
-    pkg_insertDados.sp_inserir_candidatura(6, 13, v_id);
-    pkg_insertDados.sp_inserir_candidatura(7, 8, v_id);
-    pkg_insertDados.sp_inserir_candidatura(7, 3, v_id);
-    pkg_insertDados.sp_inserir_candidatura(8, 12, v_id);
-    pkg_insertDados.sp_inserir_candidatura(8, 3, v_id);
-    pkg_insertDados.sp_inserir_candidatura(9, 1, v_id);
-    pkg_insertDados.sp_inserir_candidatura(10, 5, v_id);
-    pkg_insertDados.sp_inserir_candidatura(10, 11, v_id);
-    DBMS_OUTPUT.PUT_LINE('Candidaturas inseridas com sucesso!');
+    pkg_insertDados.sp_inserir_candidatura(6, 6, v_id);
+    pkg_insertDados.sp_inserir_candidatura(7, 7, v_id);
+    pkg_insertDados.sp_inserir_candidatura(8, 8, v_id);
+    pkg_insertDados.sp_inserir_candidatura(9, 9, v_id);
+    pkg_insertDados.sp_inserir_candidatura(10, 10, v_id);
 END;
 /
 
