@@ -11,6 +11,5 @@ mongoimport --db $DB_NAME --collection habilidades --file $JSON_DIR/habilidades.
 mongoimport --db $DB_NAME --collection vagas --file $JSON_DIR/vagas.json --jsonArray
 mongoimport --db $DB_NAME --collection empresas --file $JSON_DIR/empresas.json --jsonArray
 mongoimport --db $DB_NAME --collection usuarios --file $JSON_DIR/usuarios.json --jsonArray
-mongoimport --db $DB_NAME --collection auditoria_log --file $JSON_DIR/auditoria_log.json --jsonArray
 
 echo "Importação concluída!"
